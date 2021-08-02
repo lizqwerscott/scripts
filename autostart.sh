@@ -31,3 +31,6 @@ python eye.py &
 
 #fcitx &
 
+#Syncthing
+exec syncthing &
+
