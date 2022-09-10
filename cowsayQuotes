@@ -1,0 +1,4 @@
+#!/bin/sh
+
+shuf -n1 /home/lizqwer/scripts/quotes.txt | cowsay
+
