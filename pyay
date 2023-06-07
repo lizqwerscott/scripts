@@ -1,0 +1,14 @@
+#!/bin/sh
+
+export http_proxy=http://10.0.96.58:20171
+export https_proxy=http://10.0.96.58:20171
+
+if [ $# -lt 1 ];
+then
+    yay -Syyu
+else
+    yay $@
+fi
+
+export http_proxy=
+export https_proxy=
