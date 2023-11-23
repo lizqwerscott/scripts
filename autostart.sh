@@ -10,9 +10,10 @@
 exec picom & # 特效合成器
 exec fcitx5 & # 输入法
 exec redshift & # 护眼程序
-exec dunst & # 通知程序
+exec dunst -conf $HOME/.config/dunst/dunstrc & # 通知程序
 exec flameshot & # 截图程序
 exec xfce4-power-manager & # 启动电源管理程序
+# xautolock -time 3 -locker "screen-lock.sh" & # 自动锁屏程序
 
 # 其他
 
@@ -23,7 +24,8 @@ wmname LG3D
 #xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
 #xrandr --addmode Virtual-1 1920x1080_60.00
 #xrandr --output Virtual-1 --mode 1920x1080_60.00
-# xrandr --output HDMI-1-1 --left-of eDP-1-1 --auto
+xrandr --output HDMI-1 --left-of eDP-1 --auto
+# xrandr --output eDP-1 --off
 
 #eye
 # python eye.py &

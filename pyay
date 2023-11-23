@@ -1,7 +1,7 @@
 #!/bin/sh
 
-export http_proxy=http://10.0.96.58:20171
-export https_proxy=http://10.0.96.58:20171
+export http_proxy=http://lzpserver.com:20171
+export https_proxy=http://lzpserver.com:20171
 
 if [ $# -lt 1 ];
 then
