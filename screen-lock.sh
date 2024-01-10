@@ -1,14 +1,27 @@
 #!/bin/sh
 
-# need install i3lock-color xautolock
+# need install i3lock-color xautolock swaylock
 
 lock_picture="/home/lizqwer/Pictures/background/105118231_p0.png"
 
 # convert $lock_picture -resize $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/') RGB:- | i3lock --raw $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/'):rgb --image /dev/stdin
 
 # convert $lock_picture -resize $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/') RGB:- | i3lock --raw $(xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/'):rgb --image /dev/stdin
-i3lock -t -i $lock_picture
 
+desktop_environment=$(echo $XDG_CURRENT_DESKTOP | tr '[:upper:]' '[:lower:]')
+
+case $desktop_environment in
+    "hyprland")
+        echo "Running commands for XFCE Desktop"
+        # 在这里添加执行XFCE桌面环境下的命令
+        swaylock -t -i $lock_picture
+        ;;
+    *)
+        echo "Unknown or unsupported desktop environment: $desktop_environment"
+        # 在这里添加处理未知桌面环境的命令
+        i3lock -t -i $lock_picture
+        ;;
+esac
 # if use hyperland
 # swaylock -i 105118231_p0.png
 # BLANK='#00000000'

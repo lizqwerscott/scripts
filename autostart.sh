@@ -15,6 +15,8 @@ exec flameshot & # 截图程序
 exec xfce4-power-manager & # 启动电源管理程序
 # xautolock -time 3 -locker "screen-lock.sh" & # 自动锁屏程序
 
+# arch checkupdate
+./checkupdates.sh &
 # 其他
 
 #slove android studio
