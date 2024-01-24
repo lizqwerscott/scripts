@@ -1,0 +1,9 @@
+#!/bin/sh
+
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+echo -e "${RED}更新系统软件:${NC}"
+sudo pacman -Syyu
+echo -e "${RED}更新 Aur 软件:${NC}"
+pyay

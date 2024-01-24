@@ -5,7 +5,7 @@ export https_proxy=http://lzpserver.com:20171
 
 if [ $# -lt 1 ];
 then
-    yay -Syyu
+    yay -Sua
 else
     yay $@
 fi
