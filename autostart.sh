@@ -12,7 +12,7 @@ exec fcitx5 & # 输入法
 exec redshift & # 护眼程序
 exec dunst -conf $HOME/.config/dunst/dunstrc & # 通知程序
 exec flameshot & # 截图程序
-exec xfce4-power-manager & # 启动电源管理程序
+# exec xfce4-power-manager & # 启动电源管理程序
 # xautolock -time 3 -locker "screen-lock.sh" & # 自动锁屏程序
 
 # arch checkupdate
